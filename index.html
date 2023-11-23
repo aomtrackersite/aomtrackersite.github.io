@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Keep track of all the competitive tournaments!" />
+	<meta name="keywords" content="Age of Mythology, AoM, aom, AoT, aot, Retold, Extended Edition, aom pro, aom tournament" />
+	<meta name="author" content="AoL_Iron_maiden" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--<link rel="shortcut icon" href="favicon.ico">-->
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="stylesheet.css">
+	<script src="challonge.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.3/purify.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- load before waypoints -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+	<title>AoM Event Tracker</title>
+</head>
+<body>
+<a name="Top"></a>
+<div id="nav">
+	<a href="#Top"><div class="nav-item" id="nav-top" onClick="navClick.call(this)" title="Top">
+	</div></a>
+	<a href="#Now"><div class="nav-item" id="nav-now" onClick="navClick.call(this)" title="Current Events">
+	</div></a>
+	<a href="#Sale"><div class="nav-item" id="nav-sale" onClick="navClick.call(this)" title="On Sale">
+	</div></a>
+	<a href="#Past"><div class="nav-item" id="nav-past" onClick="navClick.call(this)" title="Past Events">
+	</div></a>
+</div>
+<header class="waypoint" id="section-header">
+	<img src="images/AgeOfMythology_gold.png" alt="Age of Mythology" />
+	<h1>Event Tracker</h1>
+	<h2>Keep track of all the competitive AoM events!</h2>
+</header><!-- closes header -->
+<a name="Now"></a>
+<section class="current waypoint" id="section-current">
+	<h1>Events Happening Now</h1>
+	<h2>Stay up to date with tournaments & showmatches that are currently running</h2>
+	
+	<div class="event-wrapper">
+		<div class="event-container">
+			<h1>King of the Gods II</h1>
+			<h2>Hosted by: Rey_del_Age</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/The_King_of_the_Gods/2" target="_blank">Information on Liquipedia</a></h3>
+			<h3><a href="https://challonge.com/KotG2" target="_blank">Bracket on Challonge.com</a>
+			<div id="KotG2">
+				<div id="KotG2-Bracket-Image">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+
+	</script>
+	
+	<div class="event-wrapper">
+		<div class="event-container">
+			<h1>S Tier TG Tournament</h1>
+			<h2>Hosted by: Gold Lion</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Tier_S_TG_Championship" target="_blank">Information on Liquipedia</a></h3>
+			<h3><a href="https://challonge.com/70jfzbt9" target="_blank">Bracket on Challonge.com</a></h3>
+			<div id="STierTG">
+				<div id="STierTG-Bracket-Image">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+
+	</script>
+	
+</section>
+
+<a name="Sale"></a>
+<section class="sale waypoint" id="section-sale">
+	<h1>On Sale?</h1>
+	<h2>Keep track of the Steam versions of the game!</h2>
+	<div id="EESaleSection">
+		<div>
+			<h3>Extended Edition</h3>
+			<a href="https://store.steampowered.com/app/266840/Age_of_Mythology_Extended_Edition/" target="_blank"><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/266840/header.jpg?t=1667261670" alt="AoM EE Logo" /></a>
+		</div>
+		<h4>The remake of AoM, available on Steam, created in 2014 by SkyBox Labs and Forgotten Empires</h4>
+		<p>Current Price: <span id="EECurrentPrice">
+		</span> <span id="EEBuyNow">Buy Now!</span></p>
+	</div>
+	
+	<div id="TotDSaleSection">
+		<div>
+			<h3>Tale of the Dragon</h3>
+			<a href="https://store.steampowered.com/app/355960/Age_of_Mythology_EX_Tale_of_the_Dragon/" target="_blank" ><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/355960/header.jpg?t=1620146031" alt="Tale of the Dragon Logo" /></a>
+		</div>
+		<h4>The Expansion created for Extended Edition in 2015, which introduces the Chinese civilization</h4>
+		<p>Current Price: <span id="TotDCurrentPrice">
+		</span> <span id="TotDBuyNow">Buy Now!</span></p>
+	</div>
+	<div id="TTAmazon">
+		<h4>What about the original version of the game?</h4>
+		<p>You can buy the CDs on <a href="https://www.amazon.com/s?k=age+of+mythology&crid=19ARE7MY3MR5&sprefix=age+of+mythology%2Caps%2C118&ref=nb_sb_noss_1">Amazon</a>!</p>
+	</div>
+</section>
+<a name="Past"></a>
+<section class="past waypoint" id="section-past">
+	<h1>Past Events</h1>
+	<h2>Stay up to date with historical tournaments & showmatches</h2>
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>Champions League Season 3</h1>
+			<h2>Hosted by: Boit</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Champions_League/3" target="_blank">Link to Liquipedia page</a></h3>
+			<div id="CLS3">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert CL 3 tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/Champions_League/3';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('CLS3').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+</section>
+
+
+
+<script>
+//get EE price
+	const EECurrentPrice = document.getElementById('EECurrentPrice');
+	const EExhr = new XMLHttpRequest();
+	const EEurl = 'https://store.steampowered.com/api/appdetails?filters=price_overview&appids=266840';
+	EExhr.open('GET', EEurl);
+	EExhr.send();
+	EExhr.onload = function() {
+		if(EExhr.status === 200){
+			const EEdata = JSON.parse(EExhr.responseText);
+			console.log(EEdata[266840].data.price_overview.final);
+			document.getElementById('EECurrentPrice').innerHTML = EEdata[266840].data.price_overview.final_formatted;
+			if(EEdata[266840].data.price_overview.final < '1100') {
+				document.getElementById('EEBuyNow').style.display = 'inline-block';
+			}else {
+				document.getElementById('EEBuyNow').style.display = 'none';
+			}
+		 }else {
+			console.log('Error', EExhr.statusText);
+		 }
+	}
+</script>
+<script>
+//get TotD price
+	const TotDCurrentPrice = document.getElementById('TotDCurrentPrice');
+	const TotDxhr = new XMLHttpRequest();
+	const TotDurl = 'https://store.steampowered.com/api/appdetails?filters=price_overview&appids=355960';
+	TotDxhr.open('GET', TotDurl);
+	TotDxhr.send();
+	TotDxhr.onload = function() {
+		if(EExhr.status === 200){
+			const TotDdata = JSON.parse(TotDxhr.responseText);
+			console.log(TotDdata[355960].data.price_overview.initial);
+			document.getElementById('TotDCurrentPrice').innerHTML = TotDdata[355960].data.price_overview.final_formatted;
+			if(TotDdata[355960].data.price_overview.initial < '599') {
+				document.getElementById('TotDBuyNow').style.display = 'inline-block';
+			}else {
+				document.getElementById('TotDBuyNow').style.display = 'none';
+			}
+		 }else {
+			console.log('Error', TotDxhr.statusText);
+		 }
+	}
+</script>
+
+<script>
+	const url = window.location.href; //do i still need this?
+	//updates color of nav item when clicked
+	function navClick() {
+		navItems = document.querySelectorAll('.nav-item');
+		navItems.forEach(item => {
+			item.style.backgroundColor = "transparent";
+		});
+		this.style.backgroundColor = "white";
+	}
+</script>
+
+<script>
+//changes bg color of nav item when scrolling
+	const waypointHeader = new Waypoint({
+		element: document.getElementById('section-header'),
+		handler: function(direction, triggeredElement) {
+			if(direction === 'down') {
+				document.getElementById('nav-top').style.backgroundColor = "white";
+			}
+		},
+		offset: 'bottom-in-view'
+	});
+	
+	const waypointCurrent = new Waypoint ({
+		element: document.getElementById('section-current'),
+		handler: function(direction, triggeredElement) {
+			if(direction === 'down') {
+				document.getElementById('nav-now').style.backgroundColor = "white";
+				document.getElementById('nav-top').style.backgroundColor = "transparent";
+			}
+			if(direction === 'up') {
+				document.getElementById('nav-now').style.backgroundColor = "transparent";
+			}
+		},
+		offset: 'bottom-in-view'
+	});
+	
+	const waypointSale = new Waypoint ({
+		element: document.getElementById('section-sale'),
+		handler: function(direction, triggeredElement) {
+			if(direction === 'down') {
+				document.getElementById('nav-sale').style.backgroundColor = "white";
+				document.getElementById('nav-now').style.backgroundColor = "transparent";
+			}
+			if(direction === 'up') {
+				document.getElementById('nav-sale').style.backgroundColor = "transparent";
+			}
+		},
+		offset: 'bottom-in-view'
+	});
+	
+	const waypointPast = new Waypoint ({
+		element: document.getElementById('section-past'),
+		handler: function(direction, triggeredElement) {
+			if(direction === 'down') {
+				document.getElementById('nav-past').style.backgroundColor = "white";
+				document.getElementById('nav-sale').style.backgroundColor = "transparent";
+			}
+			if(direction === 'up') {
+				document.getElementById('nav-past').style.backgroundColor = "transparent";
+			}
+		},
+		offset: 'bottom-in-view'
+	});
+
+</script>
+
+</body>
+</html>

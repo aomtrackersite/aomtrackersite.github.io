@@ -1,0 +1,241 @@
+/* 
+	VARIABLES
+*/
+:root {
+	--bgBlack: #191919;
+	--fontWhite: #eaeaea;
+	--currentBlack: #2b2b2b;
+	--blackGradient: linear-gradient(90deg, rgba(25,25,25,1) 0%, rgba(43,43,43,1) 56%);
+	--spanishOrange: #E06823;
+}
+
+
+
+/*
+	GENERAL
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+	font-family: "Inconsolata", Arial, sans-serif;
+	background-color: var(--bgBlack);
+	color: var(--fontWhite);
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+a,
+a:visited {
+	color: var(--spanishOrange);
+}
+
+a:hover {
+	color: var(--fontWhite);
+}
+
+
+/*
+	NAV MENU 
+*/
+
+#nav {
+	position: fixed;
+	left: 20px;
+	top: 50vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav-item {
+	height: 10px;
+	width: 10px;
+	border-radius: 25px;
+	border: 1px solid white;
+	margin: 1em;
+	cursor: pointer;
+	background: transparent;
+}
+
+.nav-item:hover {
+	background: white;
+}
+
+
+/*
+	HEADER
+*/
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+header img {
+	max-width: 33vw;
+	margin: .5em;
+}
+
+header h1 {
+	font-size: 4em;
+	margin: .5em;
+}
+
+header h2 {
+	
+}
+
+
+
+/*
+	CURRENT EVENTS
+*/
+
+.current {
+	background-color: var(--currentBlack);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 7em;
+}
+
+.current h1 {
+	font-size: 3em;
+	margin: .5em;
+}
+
+.event-wrapper {
+	max-width: 1000px;
+	width: 60vw;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+	padding: 2em;
+}
+
+.event-container {
+	border: 1px solid var(--bgBlack);
+	border-radius: 25px;
+	padding: 2em;
+	background: radial-gradient(circle, rgba(43,43,43,1) 33%, rgba(25,25,25,1) 66%);
+}
+
+.event-container img {
+	width: 75vw;
+}
+
+
+
+
+/* 
+	SALE
+*/
+
+.sale {
+	padding: 3em 2em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 7em;
+}
+
+.sale h1 {
+	font-size: 3em;
+	margin: .5em;
+}
+
+#EESaleSection,
+#TotDSaleSection {
+	padding: 3em;
+	
+}
+
+#EESaleSection img,
+#TotDSaleSection img,
+#EESaleSection p,
+#TotDSaleSection p {
+	padding: 1em;
+}
+
+#EEBuyNow,
+#TotDBuyNow {
+	font-weight: bold;
+	background-color: red;
+	border-radius: 25px;
+	padding: 7px;
+}
+
+
+
+
+/*
+	PAST EVENTS
+*/
+
+.past {
+	background-color: var(--currentBlack);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 7em;
+}
+
+.past h1 {
+	font-size: 3em;
+	margin: .5em;
+}
+
+.past-event-wrapper {
+	max-width: 1000px;
+	width: 60vw;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+	padding: 2em;
+}
+
+.past-event-container {
+	border: 1px solid var(--bgBlack);
+	border-radius: 25px;
+	padding: 2em;
+	background: radial-gradient(circle, rgba(43,43,43,1) 33%, rgba(25,25,25,1) 66%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
