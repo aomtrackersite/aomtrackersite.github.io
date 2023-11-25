@@ -115,6 +115,11 @@ header h2 {
 	margin: .5em;
 }
 
+.current h2,
+.current h3 {
+	margin: 1em;
+}
+
 .event-wrapper {
 	max-width: 1000px;
 	width: 60vw;
@@ -197,6 +202,10 @@ header h2 {
 .past h1 {
 	font-size: 3em;
 	margin: .5em;
+}
+.past h2,
+.past h3 {
+	margin: 1em;
 }
 
 .past-event-wrapper {

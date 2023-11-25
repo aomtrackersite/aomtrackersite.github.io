@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Keep track of all the competitive tournaments from 2022!" />
+	<meta name="keywords" content="Age of Mythology, AoM, aom, AoT, aot, Retold, Extended Edition, aom pro, aom tournament" />
+	<meta name="author" content="AoL_Iron_maiden" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--<link rel="shortcut icon" href="favicon.ico">-->
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="stylesheet.css">
+	<script src="challonge.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.3/purify.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- load before waypoints -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+	<title>2022 AoM Event Tracker</title>
+</head>
+<body>
+<a name="Top"></a>
+<header class="waypoint" id="section-header">
+	<img src="images/AgeOfMythology_gold.png" alt="Age of Mythology" />
+	<h1>2022 Events</h1>
+	<h2><a href="index.html">Back to home</a></h2>
+</header><!-- closes header -->
+
+<section class="past waypoint" id="section-past">
+	<h1>2022 Events</h1>
+	<h2>Stay up to date with historical tournaments & showmatches</h2>
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>A4G AoM League Season 3</h1>
+			<h2>Hosted by: DarthRevan24</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/A4G_AoM_League_Season_3" target="_blank">Link to Liquipedia page</a></h3>
+			<h3><a href="https://www.youtube.com/watch?v=umBVnAY8zTc" target="_blank">Semifinal Promotion Video</a></h3>
+			<h3><a href="https://www.youtube.com/watch?v=NwWTWHFvKjI" target="_blank">VOD of Finals, played live in Athens, Greece!</a></h3>
+			<div id="A4G">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert A4G LAN tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/A4G_AoM_League_Season_3';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('A4G').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>Meta Plays: Season 3 - Voobly Hands-Off 2v2 #2</h1>
+			<h2>Hosted by: Meta-Plays</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Meta_Plays/Age_of_Mythology/Season_3/Hands-Off/2v2/2" target="_blank">Link to Liquipedia page</a></h3>
+			<h3><a href="https://meta-plays.com/tournaments/age-of-mythology/meta-plays-hands-off-2v2-2-r879/" target="_blank">Link to Meta-Plays site</a></h3>
+			<div id="HandsOff2v2">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert Voobly Hands Off 2v2 tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/Meta_Plays/Age_of_Mythology/Season_3/Hands-Off/2v2/2';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('HandsOff2v2').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>Baldr's Betrayal</h1>
+			<h2>Hosted by: Meta-Plays</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Meta_Plays/Age_of_Mythology/Season_3/Baldr%27s_Betrayal" target="_blank">Link to Liquipedia page</a></h3>
+			<h3><a href="https://meta-plays.com/tournaments/age-of-mythology/baldrs-betrayal-r881/" target="_blank">Link to Meta-Plays site</a></h3>
+			<div id="BaldrsBetrayal">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert Baldr's Betrayal tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/Meta_Plays/Age_of_Mythology/Season_3/Baldr%27s_Betrayal';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('BaldrsBetrayal').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>Competitive Megarandom</h1>
+			<h2>Hosted by: Boit</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Competitive_Mega_Random_Tournament" target="_blank">Link to Liquipedia page</a></h3>
+			<div id="CompMR">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert Competitive Megarandom tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/Competitive_Mega_Random_Tournament';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('CompMR').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>Baldr's Betrayal</h1>
+			<h2>Hosted by: Meta-Plays</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Meta_Plays/Age_of_Mythology/Season_2/Freyja%27s_Blessing" target="_blank">Link to Liquipedia page</a></h3>
+			<h3><a href="https://meta-plays.com/tournaments/age-of-mythology/freyjasblessing/" target="_blank">Link to Meta-Plays site</a></h3>
+			<div id="FreyjasBlessing">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert Freyja's Blessing tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/Meta_Plays/Age_of_Mythology/Season_2/Freyja%27s_Blessing';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('FreyjasBlessing').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>Eternal Frost</h1>
+			<h2>Hosted by: Meta-Plays</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Meta_Plays/Age_of_Mythology/Season_2/Skirmish/Eternal_Frost" target="_blank">Link to Liquipedia page</a></h3>
+			<h3><a href="https://meta-plays.com/tournaments/age-of-mythology/eternalfrost/" target="_blank">Link to Meta-Plays site</a></h3>
+			<div id="EternalFrost">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert Eternal Frost tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/Meta_Plays/Age_of_Mythology/Season_2/Skirmish/Eternal_Frost';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('EternalFrost').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>Masters of Mythology</h1>
+			<h2>Hosted by: Boit & Nakamura</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Masters_Of_Mythology" target="_blank">Link to Liquipedia page</a></h3>
+			<div id="MastersOfMythology">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert Masters of Mythology tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/Masters_Of_Mythology';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('MastersOfMythology').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>AoT 1v1 Winter 2022 Tournament</h1>
+			<h2>Hosted by: Destroyer</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/AoT_1v1_Winter_2022_Tournament" target="_blank">Link to Liquipedia page</a></h3>
+			<div id="AoT1v1Winter2022">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert AoT 1v1 Winter 2022 tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/AoT_1v1_Winter_2022_Tournament';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('AoT1v1Winter2022').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>A4G AoM League Season 2 Elite</h1>
+			<h2>Hosted by: DarthRevan24</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/A4G_AoM_League_Season_2_Elite" target="_blank">Link to Liquipedia page</a></h3>
+			<div id="A4GS2">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert A4G LAN tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/A4G_AoM_League_Season_2_Elite';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('A4GS2').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+</section>
+		
+
+</body>
+</html>

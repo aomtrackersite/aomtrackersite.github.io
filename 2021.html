@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Keep track of all the competitive tournaments from 2022!" />
+	<meta name="keywords" content="Age of Mythology, AoM, aom, AoT, aot, Retold, Extended Edition, aom pro, aom tournament" />
+	<meta name="author" content="AoL_Iron_maiden" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--<link rel="shortcut icon" href="favicon.ico">-->
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="stylesheet.css">
+	<script src="challonge.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.3/purify.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- load before waypoints -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+	<title>2022 AoM Event Tracker</title>
+</head>
+<body>
+<a name="Top"></a>
+<header class="waypoint" id="section-header">
+	<img src="images/AgeOfMythology_gold.png" alt="Age of Mythology" />
+	<h1>2021 Events</h1>
+	<h2><a href="index.html">Back to home</a></h2>
+</header><!-- closes header -->
+
+<section class="past waypoint" id="section-past">
+	<h1>2021 Events</h1>
+	<h2>Stay up to date with historical tournaments & showmatches</h2>
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>Fimbulwinter 2</h1>
+			<h2>Hosted by: AoL_Iron_maiden</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Fimbulwinter/2" target="_blank">Link to Liquipedia page</a></h3>
+			<h3><a href="https://www.youtube.com/watch?v=qpW3v1SQhAA&list=PL2DIyciHQVNbo42LK2K0dCHD3C_jKt9kU" target="_blank">Entire tournament casted by AoL_Iron_maiden</a></h3>
+			<div id="FW2">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert Fimbulwinter 3 tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/Fimbulwinter/2';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('FW2').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+</section>
+		
+
+</body>
+</html>

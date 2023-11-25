@@ -102,8 +102,9 @@
 </section>
 <a name="Past"></a>
 <section class="past waypoint" id="section-past">
-	<h1>Past Events</h1>
+	<h1>Past 2023 Events</h1>
 	<h2>Stay up to date with historical tournaments & showmatches</h2>
+	<h2><a href="2022.html">2022 Events</a> <a href="2021.html">2021 Events</a></h2>
 	<div class="past-event-wrapper">
 		<div class="past-event-container">
 			<h1>Champions League Season 3</h1>
@@ -136,6 +137,543 @@
 		  	
 		  
 		  document.getElementById('CLS3').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+		<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>Pantheon Playoff</h1>
+			<h2>Hosted by: AoL_Iron_maiden</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Pantheon_Playoff" target="_blank">Link to Liquipedia page</a></h3>
+			<div id="PantheonPlayoff">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert Pantheon Playoff tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/Pantheon_Playoff';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('PantheonPlayoff').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>Torneio Top Br 2023</h1>
+			<h2>Hosted by: oMoradin</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Torneio_Top_Br/2023" target="_blank">Link to Liquipedia page</a></h3>
+			<div id="TopBr">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert Top Br tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/Torneio_Top_Br/2023';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('TopBr').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>The Wisdom of Thoth</h1>
+			<h2>Hosted by: Meta-Plays</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Meta_Plays/Age_of_Mythology/Season_5/The_Wisdom_of_Thoth" target="_blank">Link to Liquipedia page</a></h3>
+			<h3><a href="https://meta-plays.com/tournaments/age-of-mythology/the-wisdom-of-thoth-r886/" target="_blank">Link to Meta-Plays site</a></h3>
+			<div id="WisdomOfThoth">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert Wisdom of Thoth tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/Meta_Plays/Age_of_Mythology/Season_5/The_Wisdom_of_Thoth';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('WisdomOfThoth').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>Punk Cup</h1>
+			<h2>Hosted by: Punkstar555</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Punk_Cup_Tournament" target="_blank">Link to Liquipedia page</a></h3>
+			<div id="PunkCup">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert Punk Cup tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/Punk_Cup_Tournament';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('PunkCup').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+		<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>ROTG Aztec Tourney #3</h1>
+			<h2>Hosted by: Return of the Gods (ROTG) Team</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/RotG_Aztec_Tournament/3" target="_blank">Link to Liquipedia page</a></h3>
+			<div id="ROTG3">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert ROTG 3 tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/RotG_Aztec_Tournament/3';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('ROTG3').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>AoM Sul America Dream Team 1 Edicao</h1>
+			<h2>Hosted by: oMoradin</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/AOM_Sul_America_Dream_Team_1%C2%BA_Edi%C3%A7%C3%A3o" target="_blank">Link to Liquipedia page</a></h3>
+			<div id="DreamTeam1">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert Sul America Dream Team 1 tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/AOM_Sul_America_Dream_Team_1%C2%BA_Edi%C3%A7%C3%A3o';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('DreamTeam1').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>Embrace the Void</h1>
+			<h2>Hosted by: AProperGentleman</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Embrace_The_Void" target="_blank">Link to Liquipedia page</a></h3>
+			<div id="EmbraceVoid">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert Embrace the Void tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/Embrace_The_Void';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('EmbraceVoid').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+		<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>The Golden Gift</h1>
+			<h2>Hosted by: Meta-Plays</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Meta_Plays/Age_of_Mythology/Season_4/The_Golden_Gift" target="_blank">Link to Liquipedia page</a></h3>
+			<h3><a href="https://meta-plays.com/tournaments/age-of-mythology/the-golden-gift-r885/" target="_blank">Link to Meta-Plays site</a></h3>
+			<div id="GoldenGift">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert Golden Gift tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/Meta_Plays/Age_of_Mythology/Season_4/The_Golden_Gift';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('GoldenGift').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+		<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>Bonquiqui's April Fools Tournament</h1>
+			<h2>Hosted by: Bonquiqui (and AoL_Iron_maiden)</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/BONQUIQUI%27S_April_Fools_$200_Tournament" target="_blank">Link to Liquipedia page</a></h3>
+			<div id="BQQ">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert BQQ April Fools tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/BONQUIQUI%27S_April_Fools_$200_Tournament';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('BQQ').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+	
+		<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>Fimbulwinter 3</h1>
+			<h2>Hosted by: AoL_Iron_maiden</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Fimbulwinter/3" target="_blank">Link to Liquipedia page</a></h3>
+			<h3><a href="https://www.youtube.com/watch?v=PWYNgX7co44&list=PL2DIyciHQVNYkPVHb_NCz2Nazi4HYHn8R" target="_blank">Entire tournament casted by AoL_Iron_maiden</a></h3>
+			<div id="FW3">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert Fimbulwinter 3 tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/Fimbulwinter/3';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('FW3').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>KeeN's Map Masters</h1>
+			<h2>Hosted by: KeeN_Flame</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/KeeN%27s_Map_Masters" target="_blank">Link to Liquipedia page</a></h3>
+			<h3><a href="https://www.youtube.com/playlist?list=PL2DIyciHQVNb9w3yu9MFDQqtwWPJH0x_a" target="_blank">Finals and Losers Bracket casted by AoL_Iron_maiden</a></h3>
+			<div id="MapMasters">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert Keen's Map Masters tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/KeeN%27s_Map_Masters';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('MapMasters').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>Atlantean Only Tourney</h1>
+			<h2>Hosted by: KeeN_reGulate</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Atlantean_Only_Tournament" target="_blank">Link to Liquipedia page</a></h3>
+			<div id="AttyOnly">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert Atlantean Only tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/Atlantean_Only_Tournament';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('AttyOnly').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>Phoenix Reborn</h1>
+			<h2>Hosted by: Boit</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Phoenix_Reborn" target="_blank">Link to Liquipedia page</a></h3>
+			<div id="PhoenixReborn">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert Phoenix Reborn tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/Phoenix_Reborn';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('PhoenixReborn').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+	<div class="past-event-wrapper">
+		<div class="past-event-container">
+			<h1>ROTG Aztec Tourney #2</h1>
+			<h2>Hosted by: Return of the Gods (ROTG) Team</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/RotG_Aztec_Tournament/2" target="_blank">Link to Liquipedia page</a></h3>
+			<div id="ROTG2">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert ROTG 2 tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/RotG_Aztec_Tournament/2';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('ROTG2').innerHTML = sanitized;
 
 		}
 
