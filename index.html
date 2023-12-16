@@ -40,6 +40,23 @@
 	
 	<div class="event-wrapper">
 		<div class="event-container">
+			<h1>Fimbulwinter 4</h1>
+			<h2>Hosted by: AoL_Iron_maiden</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Fimbulwinter/4" target="_blank">Information on Liquipedia</a></h3>
+			<h3><a href="https://challonge.com/fimbulwinter4_1" target="_blank">Bracket on Challonge.com</a>
+			<div id="FW4">
+				<div id="FW4-Bracket-Image">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+
+	</script>
+	
+	
+	<div class="event-wrapper">
+		<div class="event-container">
 			<h1>King of the Gods II</h1>
 			<h2>Hosted by: Rey_del_Age</h2>
 			<h3><a href="https://liquipedia.net/ageofempires/The_King_of_the_Gods/2" target="_blank">Information on Liquipedia</a></h3>
@@ -53,22 +70,7 @@
 	<script>
 
 	</script>
-	
-	<div class="event-wrapper">
-		<div class="event-container">
-			<h1>S Tier TG Tournament</h1>
-			<h2>Hosted by: Gold Lion</h2>
-			<h3><a href="https://liquipedia.net/ageofempires/Tier_S_TG_Championship" target="_blank">Information on Liquipedia</a></h3>
-			<h3><a href="https://challonge.com/70jfzbt9" target="_blank">Bracket on Challonge.com</a></h3>
-			<div id="STierTG">
-				<div id="STierTG-Bracket-Image">
-				</div>
-			</div>
-		</div>
-	</div>
-	<script>
 
-	</script>
 	
 </section>
 
@@ -105,6 +107,47 @@
 	<h1>Past 2023 Events</h1>
 	<h2>Stay up to date with historical tournaments & showmatches</h2>
 	<h2><a href="2022.html">2022 Events</a> <a href="2021.html">2021 Events</a></h2>
+		
+	<div class="event-wrapper">
+		<div class="event-container">
+			<h1>S Tier TG Tournament</h1>
+			<h2>Hosted by: Gold Lion</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Tier_S_TG_Championship" target="_blank">Information on Liquipedia</a></h3>
+			<h3><a href="https://challonge.com/70jfzbt9" target="_blank">Bracket on Challonge.com</a></h3>
+			<div id="STierTG">
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert S Tier TG tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/Tier_S_TG_Championship';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('STierTG').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
+	
 	<div class="past-event-wrapper">
 		<div class="past-event-container">
 			<h1>Champions League Season 3</h1>

@@ -1,4 +1,4 @@
-const sTierTGTourneyCall = fetch('https://api.challonge.com/v1/tournaments/70jfzbt9.json?include_participants=1', {
+const fw4TourneyCall = fetch('https://api.challonge.com/v1/tournaments/fimbulwinter4_1.json?include_participants=1', {
   headers: {
     'Authorization': `Basic ${btoa('AoMTrackerSite:63jJBkRoGMwv3dJztxhCP3Rn0YCLc7GliPxFsQ0S')}`  
   }
@@ -6,9 +6,9 @@ const sTierTGTourneyCall = fetch('https://api.challonge.com/v1/tournaments/70jfz
 .then (response => response.json())
 .then (data => {
 	console.log(data);
-	const STierTGImageUrl = data.tournament.live_image_url;
-	const STierTGImageDiv = document.getElementById('STierTG-Bracket-Image');
-	STierTGImageDiv.innerHTML = "<img src=" + `"` + STierTGImageUrl + `"` + "/>"
+	const fw4ImageUrl = data.tournament.live_image_url;
+	const fw4ImageDiv = document.getElementById('FW4-Bracket-Image');
+	fw4ImageDiv.innerHTML = "<img src=" + `"` + fw4ImageUrl + `"` + "/>"
 })  
 .catch(error => {
     console.error('Error:', error); 
