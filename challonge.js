@@ -1,4 +1,4 @@
-const fw4TourneyCall = fetch('https://api.challonge.com/v1/tournaments/fimbulwinter4_1.json?include_participants=1', {
+const fw4TourneyCall = fetch('https://api.challonge.com/v1/tournaments/fimbulwinter4_2.json?include_participants=1', {
   headers: {
     'Authorization': `Basic ${btoa('AoMTrackerSite:63jJBkRoGMwv3dJztxhCP3Rn0YCLc7GliPxFsQ0S')}`  
   }
