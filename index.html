@@ -38,6 +38,48 @@
 	<h1>Events Happening Now</h1>
 	<h2>Stay up to date with tournaments & showmatches that are currently running</h2>
 	
+		<div class="event-wrapper">
+		<div class="event-container">
+			<h1>Power of the Gods</h1>
+			<h2>Hosted by: B3rn</h2>
+			<h3><a href="https://liquipedia.net/ageofempires/Power_of_the_Gods" target="_blank">Information on Liquipedia</a></h3>
+			<img src="images/PotG_Groups.png" alt="Power of the Gods Groups"  style="max-width: 800px;" />
+			<img src="images/PotG_GroupMatches.png" alt="Power of the Gods group matches" style="max-width: 800px;"/>
+			<div id="PotG">
+				<div id="PotG-image">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+	//insert Power of the Gods tourney info
+		async function fetchDiv() {
+
+		  const url = 'https://liquipedia.net/ageofempires/Power_of_the_Gods';
+		  
+		  const response = await fetch(url);
+		  const html = await response.text();
+		  
+		  const parser = new DOMParser();
+		  const doc = parser.parseFromString(html, 'text/html');
+		  
+		  const div = doc.querySelector('div.fo-nttax-infobox');
+		  
+		  div.querySelectorAll('img').forEach(img => {
+				img.remove(); 
+			});
+
+		  // Sanitize div HTML to prevent XSS
+		  const sanitized = DOMPurify.sanitize(div.outerHTML); 
+		  	
+		  
+		  document.getElementById('PotG-image').innerHTML = sanitized;
+
+		}
+
+		fetchDiv();
+	</script>
+	
 	<div class="event-wrapper">
 		<div class="event-container">
 			<h1>Fimbulwinter 4</h1>
